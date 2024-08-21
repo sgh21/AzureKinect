@@ -53,6 +53,10 @@ class robot(object):
                 return 1
 
         return 0
+    
+    def movel_both_sendsignal(self, target_ur5e_p, target_ur5_p, v_ur5e, v_ur5):
+        self.robot_ur5.movel(target_ur5_p, acc=1.5, vel=v_ur5, wait=False)
+        self.robot_ur5e.movel(target_ur5e_p, acc=1.5, vel=v_ur5e, wait=False)
 
     def movel_both(self, target_ur5e_p, target_ur5_p, v_ur5e, v_ur5):
         self.robot_ur5.movel(target_ur5_p, acc=1.5, vel=v_ur5, wait=False)
